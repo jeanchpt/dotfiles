@@ -272,7 +272,7 @@ notify-send "cool2" "yeah it is working"'
 alias ll="ls -al"
 
 # to deal with config files
-alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # ---------------P R O M P T------------------
 # Init Starship
