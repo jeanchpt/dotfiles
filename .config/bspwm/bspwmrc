@@ -1,23 +1,45 @@
 #!/bin/sh
 
-#####################################################
-#   ██████╗ ███████╗██████╗ ██╗    ██╗███╗   ███╗   #
-#   ██╔══██╗██╔════╝██╔══██╗██║    ██║████╗ ████║   #
-#   ██████╔╝███████╗██████╔╝██║ █╗ ██║██╔████╔██║   #
-#   ██╔══██╗╚════██║██╔═══╝ ██║███╗██║██║╚██╔╝██║   #
-#   ██████╔╝███████║██║     ╚███╔███╔╝██║ ╚═╝ ██║   #
-#   ╚═════╝ ╚══════╝╚═╝      ╚══╝╚══╝ ╚═╝     ╚═╝   #                                    
-##################### By: Rxyhn  ####################
+##### AUTOSTART PART
 
-# ##############################################################################
-# #                                  ENV VARS                                  # 
-# ##############################################################################
+# Run keybindings daemon (the '-m' option is important for non-qwerty
+# keyboards) --> See the man page for precisions
+sxhkd -m 1 &
 
-## Environments
+# Run eww (for the bar)
+$HOME/.local/bin/eww -c $HOME/.config/eww/bar --restart open bar &
+
+# Run notification daemon
+dunst --config $HOME/.config/dunst/dunstrc &
+
+# Run the compositor
+picom --config $HOME/.config/picom/picom.conf &
+
+# Run polkit daemon if doesn't started.
+[ -n "$(pidof xfce-polkit)" ] || /usr/lib/xfce-polkit/xfce-polkit &
+
+# Run the power manager
+xfce4-power-manager &
+
+# Run mpd if it is not already running
+[ -n "$(pidof mpd)" ] || mpd &
+
+# Execute bspwm-specific scripts
+bspfloat &
+
+# Start X wallpaper
+feh --no-fehbg --bg-fill $HOME/pictures/wallpapers/dunes.jpg
+
+# Fix cursor
+xsetroot -cursor_name left_ptr 
+
+# Extend the path with binaries in bspwm's folder
 export PATH="${PATH}:${HOME}/.config/bspwm/bin"
 
 # Parse colors from "~/.Xresources"
 xrdb -override "${HOME}/.Xresources"
+
+##### UTILS
 
 xrdb_query()
 {
@@ -46,64 +68,21 @@ getcolors()
 
 getcolors
 
-# ##############################################################################
-# #                                  FUNCTIONS                                 # 
-# ##############################################################################
-
 # Credits to 6gk/polka
 rule() { bspc rule -a "$@" & }
 config() { bspc config "$@" & }
 
-# ##############################################################################
-# #                                AUTOSTART APPS                              #
-# ##############################################################################
-
-# Run keybindings daemon.
-pgrep -x sxhkd > /dev/null || sxhkd &
-
-# Run EWW.
-$HOME/.local/bin/eww -c $HOME/.config/eww/bar --restart open bar &
-
-# Run notification daemon.
-dunst --config $HOME/.config/dunst/dunstrc &
-
-# Run Picom.
-picom --config $HOME/.config/picom/picom.conf &
-
-# Run polkit daemon if doesn't started.
-[ -n "$(pidof xfce-polkit)" ] || /usr/lib/xfce-polkit/xfce-polkit &
-
-# Run power manager.
-xfce4-power-manager &
-
-# Run mpd if doesn't started.
-[ -n "$(pidof mpd)" ] || mpd &
-
-# Execute bspwm-specific scripts.
-bspfloat &
-
-# Start X wallpaper.
-feh --no-fehbg --bg-fill $HOME/pictures/wallpapers/dunes.jpg
-
-
-# Fix cursor.
-xsetroot -cursor_name left_ptr 
-
-# ##############################################################################
-# #                                 WINDOW RULES                               #
-# ##############################################################################
+##### WINDOWS
 
 bspc monitor -d 1 2 3 4 5 6  
 
 rule -a kitty                       follow=on focus=on
-rule -a Code                        follow=on focus=on
+rule -a code                        follow=on focus=on
 rule -a firefox                     follow=on focus=on
 rule mpv                            state=floating
 rule feh                            state=floating
 
-# ##############################################################################
-# #                            GENERAL CONFIGURATION                           #
-# ##############################################################################
+##### GENERAL
 
 bspc subscribe node_state | while read -r _ _ _ _ state flag; do
     if [ "$state" != "fullscreen" ]; then
@@ -116,7 +95,7 @@ bspc subscribe node_state | while read -r _ _ _ _ state flag; do
     fi
 done &
 
-config left_padding 46
+config left_padding 54
 config border_width 4
 config window_gap 10
 config split_ratio 0.50
