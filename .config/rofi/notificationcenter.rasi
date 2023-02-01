@@ -24,7 +24,7 @@ prompt {
     background-color:               @background;
     text-color:                     @foreground;
     padding:                        10px 20px 5px 5px;
-    font:                           "JetbrainsMono Nerd Font 15";
+    font:                           "Google Sans Medium 15";
 }
 
 inputbar {
@@ -78,7 +78,7 @@ element-icon {
 }
 
 element-text {
-    font:                           "Cartograph CF Italic 10";
+    font:                           "Google Sans Regular 10";
     expand:                         true;
     horizontal-align:               0.5;
     vertical-align:                 0.5;
