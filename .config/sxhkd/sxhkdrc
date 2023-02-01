@@ -1,12 +1,3 @@
-#########################################################
-#	███████╗██╗  ██╗██╗  ██╗██╗  ██╗██████╗		#
-#	██╔════╝╚██╗██╔╝██║  ██║██║ ██╔╝██╔══██╗	#
-#	███████╗ ╚███╔╝ ███████║█████╔╝ ██║  ██║	#
-#	╚════██║ ██╔██╗ ██╔══██║██╔═██╗ ██║  ██║	#
-#	███████║██╔╝ ██╗██║  ██║██║  ██╗██████╔╝	#
-#	╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝		#
-####################By: rxyhn############################
-
 ##---------- Keybindings for bspwm ----------##
 
 # Terminal (kitty)
@@ -22,7 +13,7 @@ super + m
     sh $HOME/.local/bin/launcher
 
 # Toggle eww dashboard
-super + d
+super + ,
     sh $HOME/.local/bin/dashboard
 
 # Toggle notification center
@@ -40,8 +31,8 @@ ctrl + alt + l
 ##---------- Applications ----------##
 
 # Launch Apps
-super + {f,w,e}
-	{thunar,firefox,code}
+super + {w,e,d}
+	{firefox,code,discord}
 
 ##---------- System Keys ----------##
 
