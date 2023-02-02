@@ -1,21 +1,5 @@
 #! /bin/zsh
 
-#--------------------------------------------------------------------------------
-#	▒███████▒  ██████  ██░ ██     ▄████▄   ▒█████   ███▄    █   █████▒██▓  ▄████ 
-#	▒ ▒ ▒ ▄▀░▒██    ▒ ▓██░ ██▒   ▒██▀ ▀█  ▒██▒  ██▒ ██ ▀█   █ ▓██   ▒▓██▒ ██▒ ▀█▒
-#	░ ▒ ▄▀▒░ ░ ▓██▄   ▒██▀▀██░   ▒▓█    ▄ ▒██░  ██▒▓██  ▀█ ██▒▒████ ░▒██▒▒██░▄▄▄░
-#	  ▄▀▒   ░  ▒   ██▒░▓█ ░██    ▒▓▓▄ ▄██▒▒██   ██░▓██▒  ▐▌██▒░▓█▒  ░░██░░▓█  ██▓
-#	▒███████▒▒██████▒▒░▓█▒░██▓   ▒ ▓███▀ ░░ ████▓▒░▒██░   ▓██░░▒█░   ░██░░▒▓███▀▒
-#	░▒▒ ▓░▒░▒▒ ▒▓▒ ▒ ░ ▒ ░░▒░▒   ░ ░▒ ▒  ░░ ▒░▒░▒░ ░ ▒░   ▒ ▒  ▒ ░   ░▓   ░▒   ▒ 
-#	░░▒ ▒ ░ ▒░ ░▒  ░ ░ ▒ ░▒░ ░     ░  ▒     ░ ▒ ▒░ ░ ░░   ░ ▒░ ░      ▒ ░  ░   ░ 
-#	░ ░ ░ ░ ░░  ░  ░   ░  ░░ ░   ░        ░ ░ ░ ▒     ░   ░ ░  ░ ░    ▒ ░░ ░   ░ 
-#	  ░ ░          ░   ░  ░  ░   ░ ░          ░ ░           ░         ░        ░ 
-#	░                            ░                                               
-#--------------------------------By: @rxyhn--------------------------------------
-
-
-
-
 # If you come from bash you might have to change your $PATH.
 export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
 
@@ -29,7 +13,7 @@ if [[ $- != *i* ]]; then
 	return
 fi
 
-# completion cache path setup
+# Completion cache path setup
 typeset -g comppath="$HOME/.cache"
 typeset -g compfile="$comppath/.zcompdump"
 
@@ -74,7 +58,7 @@ src() {
 	exec zsh
 }
 
-# Ditch Nano, join the Vim Team
+# Ditch Nano, join the Vim team
 export EDITOR=/usr/bin/vim
 export SUDO_EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
