@@ -14,7 +14,7 @@ window {
   anchor: center;
   x-offset: 0px;
   transparency: "real";
-  width: 25%;
+  width: 15%;
 }
 
 entry {
@@ -25,7 +25,7 @@ entry {
   horizontal-align: 0;
   placeholder: "Type here to search...";
   padding: 10px;
-  margin: 0 1%;
+  margin: 5px 5px 0px 5px;
   blink: true;
   border: 0px 0px 3px 0px;
   border-radius: 6px;
@@ -38,14 +38,14 @@ inputbar {
   text-color: @background;
   expand: false;
   margin: 0px 0px 0px 0px;
-  padding: 1%;
+  padding: 0%;
 }
 
 listview {
   background-color: @background;
   padding: 10px;
-  columns: 3;
-  lines: 2;
+  columns: 1;
+  lines: 5;
   spacing: 0%;
   cycle: false;
   dynamic: true;
@@ -60,7 +60,7 @@ mainbox {
 }
 
 element {
-  orientation: vertical;
+  orientation: horizontal;
   background-color: @background;
   text-color: @foreground;
   border-radius: 10px;
@@ -75,7 +75,7 @@ element-icon, element-text {
 element-icon {
   horizontal-align: 0.5;
   vertical-align: 0.5;
-  size: 42px;
+  size: 20px;
   border: 16px;
   border-color: transparent;
 }
@@ -84,7 +84,7 @@ element-text {
   expand: true;
   horizontal-align: 0.5;
   vertical-align: 0.5;
-  margin: -12px 0px 12px 0px;
+  margin: -3px 0px 3px 0px;
 }
 
 element selected {
