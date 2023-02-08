@@ -6,6 +6,9 @@
 # keyboards) --> See the man page for precisions
 sxhkd -m 1 &
 
+# Set frame rate and resolution
+xrandr --output DP-4 --mode 1920x1080 --rate 144
+
 # Run polybar
 $HOME/.config/polybar/launch.sh &
 
@@ -28,7 +31,7 @@ xfce4-power-manager &
 bspfloat &
 
 # Start X wallpaper
-feh --no-fehbg --bg-fill $HOME/.local/share/wallpapers/lake.jpg
+feh --no-fehbg --bg-fill $HOME/.local/share/wallpapers/mountain_tl.jpg
 
 # Fix cursor
 xsetroot -cursor_name left_ptr 
