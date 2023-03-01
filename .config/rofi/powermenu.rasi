@@ -1,0 +1,106 @@
+configuration {
+  font: "Google Sans Regular";
+  scroll-method: 0;
+  disable-history: false;
+  sidebar-mode: false;
+}
+
+@import "~/.config/rofi/colors/colors.rasi"
+
+window {
+  background-color: @background;
+  border: 0;
+  padding: 1px 0px 8px 8px;
+  transparency: "real";
+  width: 115px;
+  location: northwest;
+  y-offset: 29;
+  x-offset: 5;
+  transparency: "real";
+}
+
+listview {
+  lines: 4;
+  columns: 1;
+  scrollbar: false;
+}
+
+element {
+  border: 0;
+  padding: 1px ;
+}
+
+element-text {
+  background-color: inherit;
+  text-color:       inherit;
+}
+
+element.normal.normal {
+  background-color: @normal-background;
+  text-color: @normal-foreground;
+}
+
+element.normal.urgent {
+  background-color: @urgent-background;
+  text-color: @urgent-foreground;
+}
+
+element.normal.active {
+  background-color: @active-background;
+  text-color: @active-foreground;
+}
+
+element.selected.normal {
+  background-color: @selected-normal-background;
+  text-color: @selected-normal-foreground;
+}
+
+element.selected.urgent {
+  background-color: @selected-urgent-background;
+  text-color: @selected-urgent-foreground;
+}
+
+element.selected.active {
+  background-color: @selected-active-background;
+  text-color: @selected-active-foreground;
+}
+
+element.alternate.normal {
+  background-color: @alternate-normal-background;
+  text-color: @alternate-normal-foreground;
+}
+
+element.alternate.urgent {
+  background-color: @alternate-urgent-background;
+  text-color: @alternate-urgent-foreground;
+}
+
+element.alternate.active {
+  background-color: @alternate-active-background;
+  text-color: @alternate-active-foreground;
+}
+
+mode-switcher {
+  border: 2px 0px 0px ;
+  border-color: @separatorcolor;
+}
+
+button {
+  spacing: 0;
+  text-color: @normal-foreground;
+}
+
+button.selected {
+  background-color: @selected-normal-background;
+  text-color: @selected-normal-foreground;
+}
+
+case-indicator {
+  spacing:    0;
+  text-color: @normal-foreground;
+}
+
+/*removes the text input line*/
+mainbox {
+  children: [listview];
+}
