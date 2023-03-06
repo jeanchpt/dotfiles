@@ -258,6 +258,9 @@ alias ll="ls -al"
 # to deal with config files
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+# OWASP Zap
+alias zap="/opt/zaproxy/zap.sh"
+
 # ---------------P R O M P T------------------
 # Init Starship
 eval "$(starship init zsh)"
