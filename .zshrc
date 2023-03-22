@@ -262,6 +262,9 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias starttc="/opt/apache-tomcat-9.0.73/bin/startup.sh"
 alias stoptc="/opt/apache-tomcat-9.0.73/bin/shutdown.sh"
 
+# OWASP Zap
+alias zap="/opt/zaproxy/zap.sh"
+
 # ---------------P R O M P T------------------
 # Init Starship
 eval "$(starship init zsh)"
