@@ -258,6 +258,10 @@ alias ll="ls -al"
 # to deal with config files
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+# alias for Tomcat
+alias starttc="/opt/apache-tomcat-9.0.73/bin/startup.sh"
+alias stoptc="/opt/apache-tomcat-9.0.73/bin/shutdown.sh"
+
 # ---------------P R O M P T------------------
 # Init Starship
 eval "$(starship init zsh)"
