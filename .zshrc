@@ -265,6 +265,9 @@ alias stoptc="/opt/apache-tomcat-9.0.73/bin/shutdown.sh"
 # OWASP Zap
 alias zap="/opt/zaproxy/zap.sh"
 
+# Proverif
+alias proverif="$HOME/.opam/default/bin/proverif"
+
 # ---------------P R O M P T------------------
 # Init Starship
 eval "$(starship init zsh)"
