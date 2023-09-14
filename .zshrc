@@ -268,6 +268,9 @@ alias zap="/opt/zaproxy/zap.sh"
 # Proverif
 alias proverif="$HOME/.opam/default/bin/proverif"
 
+# MCMT
+alias mcmt="/opt/MCMT_distrib_v3.0Y/linux64/bin/mcmt"
+
 # ---------------P R O M P T------------------
 # Init Starship
 eval "$(starship init zsh)"
