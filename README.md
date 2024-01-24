@@ -1,6 +1,6 @@
 # DOTFILES
 
-## About
+## Instructions
 
 This is my personal dotfiles backup in order to be able to easily replicate my
 desktop configuration. If you want to do the same thing, here are some easy
@@ -30,7 +30,7 @@ config checkout
 config config status.showUntrackedFiles no
 ```
 
-### Commands
+### Manage files
 
 To manage your dotfiles :
 
@@ -40,6 +40,12 @@ config add <file>
 config commit -m <message>
 config push
 ```
+
+## Content
+
+### Neovim
+
+My neovim configuration is made from a [LazyVim](https://github.com/LazyVim/LazyVim) starter.
 
 ## Credits
 
